@@ -1,0 +1,20 @@
+# Dependências
+node_modules/
+
+# Arquivos de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ambiente de Runtime
+.env
+
+# Arquivos de editor/IDE
+.vscode/
+
+# Arquivos de sistema Windows
+Thumbs.db
+Desktop.ini
+
+# Pasta de cache do npm
+.npm

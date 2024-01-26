@@ -1,0 +1,22 @@
+# Escolher a imagem base do Node.js
+FROM node:16
+
+# Definir o diretório de trabalho no container
+WORKDIR /usr/src/app
+
+# Copiar o arquivo 'package.json' e 'package-lock.json' (se disponível)
+# Isso é feito separadamente para aproveitar o cache das camadas Docker
+COPY package*.json ./
+
+# Instalar dependências
+# Nota: 'npm ci' é mais rigoroso e indicado para builds de produção
+RUN npm install
+
+# Copiar o restante dos arquivos do projeto para o container
+COPY . .
+
+# O script não especificou uma porta, mas se sua aplicação a utilizasse,
+# seria necessário expô-la com o comando EXPOSE (e.g., EXPOSE 8080)
+
+# Comando para executar o script
+CMD [ "node", "task.js" ]

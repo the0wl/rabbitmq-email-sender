@@ -1,0 +1,15 @@
+{
+  "name": "task-queue-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "task.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "the0wl",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "amqplib": "^0.10.3"
+  }
+}
